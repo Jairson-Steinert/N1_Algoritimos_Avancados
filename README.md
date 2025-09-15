@@ -45,10 +45,10 @@ O objetivo é calcular o **caminho simples com peso máximo** entre a origem e o
 
 ```bash
 # Clone o repositório
-git clone https://github.com/Jairson-Steinert/caminho-maximo-dag.git
+git clone https://github.com/Jairson-Steinert/N1_Algoritimos_Avancados.git
 
 # Entre na pasta do projeto
-cd caminho-maximo-dag
+cd N1_Algoritimos_Avancados
 ```
 
 ### Opção 2: Download ZIP
@@ -169,7 +169,7 @@ Correção: Substitua uma das posições por '0'
 ## 🏗️ Estrutura do Projeto
 
 ```
-N1_Algoritmos_Avançados/
+N1_Algoritimos_Avancados/
 ├── n1.py                         # Arquivo principal com o algoritmo
 ├── README.md                     # Este arquivo
 ├── entrada.txt                   # Arquivo de entrada padrão
