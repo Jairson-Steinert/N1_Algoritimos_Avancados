@@ -1,49 +1,6 @@
-# Caminho Mais Longo em Grafos Acíclicos Direcionados (D### Opção 2: Download ZIP
+# Caminho Mais Longo em Grafos Acíclicos Direcionados (DAGs)
 
-1. Acesse: [https://github.com/Jairson-Steinert/caminho-maximo-dag](https://github.com/Jairson-Steinert/caminho-maximo-dag)
-2. Clique em **"Code"** → **"Download ZIP"**
-3. Extraia o arquivo ZIP
-4. Abra o terminal na pasta extraída
-
-## Configuração do Ambiente Python
-
-### Criar e Ativar Ambiente Virtual (Recomendado)
-
-```bash
-# Windows (PowerShell/CMD)
-python -m venv .venv
-.\.venv\Scripts\activate
-
-# Windows (Git Bash)
-python -m venv .venv
-source .venv/Scripts/activate
-
-# Linux/Mac
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-> **💡 Por que usar ambiente virtual?**
-> - Isola dependências do projeto
-> - Evita conflitos entre diferentes projetos Python
-> - Mantém o sistema limpo e organizado
-
-### Verificar Instalação
-
-```bash
-# Verificar versão do Python
-python --version
-
-# Deve retornar Python 3.x
-```
-
-## 🛠️ Como Executar
-
-### Pré-requisitos
-
-- **Python 3.x** (sem dependências externas)
-- **Git** (opcional, para clonar o repositório)
-- **Ambiente virtual** (recomendado)mentação em Python para resolver o problema do caminho mais longo em um Grafo Acíclico Direcionado (DAG), desenvolvido como parte da disciplina de Algoritmos Avançados.
+Implementação em Python para resolver o problema do caminho mais longo em um Grafo Acíclico Direcionado (DAG), desenvolvido como parte da disciplina de Algoritmos Avançados.
 
 **Autor:** Jairson Steinert  
 **Professora:** Ma. Beatriz Michelson Reichert  
@@ -82,9 +39,9 @@ O objetivo é calcular o **caminho simples com peso máximo** entre a origem e o
 - **📝 Parsing Inteligente**: Ignora automaticamente linhas vazias e comentários (`#`)
 - **🎨 Formatação Adaptativa**: Caminhos longos são quebrados em linhas para melhor legibilidade
 
-## � Instalação e Download
+## 📥 Instalação e Download
 
-### Opção 1: Download do GitHub
+### Opção 1: Git Clone (Recomendado)
 
 ```bash
 # Clone o repositório
@@ -92,42 +49,43 @@ git clone https://github.com/Jairson-Steinert/caminho-maximo-dag.git
 
 # Entre na pasta do projeto
 cd caminho-maximo-dag
-
-# Execute o algoritmo
-python n1.py entrada.txt
 ```
 
 ### Opção 2: Download ZIP
 
-1. Acesse: [https://github.com/Jairson-Steinert/caminho-maximo-dag](https://github.com/Jairson-Steinert/caminho-maximo-dag)
+1. Acesse o repositório no GitHub
 2. Clique em **"Code"** → **"Download ZIP"**
 3. Extraia o arquivo ZIP
 4. Abra o terminal na pasta extraída
 
-## �🛠️ Como Executar
+## Configuração do Ambiente
 
-### Pré-requisitos
-
-- **Python 3.x** (sem dependências externas)
-- **Git** (opcional, para clonar o repositório)
-
-### Comando de Execução
+### 1. Criar Ambiente Virtual (Recomendado)
 
 ```bash
-# 1. Ative o ambiente virtual (se criado)
-# Windows
+# Criar ambiente virtual
+python -m venv .venv
+
+# Ativar ambiente virtual
+# Windows:
 .\.venv\Scripts\activate
-# Linux/Mac
+# Linux/Mac:
 source .venv/bin/activate
+```
 
-# 2. Execute o algoritmo
-# Sintaxe geral
-python n1.py <arquivo_de_entrada.txt>
+### 2. Verificar Instalação
 
-# Exemplo específico
+```bash
+python --version  # Deve retornar Python 3.x
+```
+
+## 🛠️ Como Executar
+
+```bash
+# Executar com arquivo específico
 python n1.py entrada.txt
 
-# Usando arquivo padrão
+# Ou usar arquivo padrão
 python n1.py
 ```
 
@@ -212,11 +170,12 @@ Correção: Substitua uma das posições por '0'
 
 ```
 N1_Algoritmos_Avançados/
-├── n1.py                 # Arquivo principal com o algoritmo
-├── README.md             # Este arquivo
-├── entrada.txt           # Arquivo de entrada padrão
-├── teste.txt             # Arquivo de teste básico
-├── teste_negativo.txt    # Teste com pesos negativos e grafo grande
+├── n1.py                         # Arquivo principal com o algoritmo
+├── README.md                     # Este arquivo
+├── entrada.txt                   # Arquivo de entrada padrão
+├── teste.txt                     # Arquivo de teste básico
+├── teste_negativo.txt            # Teste com pesos negativos e grafo grande
+├── Relatório_N1_Algoritmos_Avançados.pdf  # Relatório acadêmico do projeto
 ```
 
 ## 📈 Complexidade
