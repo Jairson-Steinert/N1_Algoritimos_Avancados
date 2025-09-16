@@ -6,7 +6,7 @@ Implementação em Python para resolver o problema do caminho mais longo em um G
 **Professora:** Ma. Beatriz Michelson Reichert  
 **Disciplina:** Algoritmos Avançados
 
-## 📜 Descrição do Problema
+## Descrição do Problema
 
 Este script lê um arquivo de entrada contendo:
 - O número de vértices do grafo
@@ -17,11 +17,11 @@ O objetivo é calcular o **caminho simples com peso máximo** entre a origem e o
 
 ### Requisitos do Problema
 
-- ✅ O grafo deve ser **direcionado e acíclico (DAG)**
-- ✅ Pesos podem ser **negativos**, mas o valor `0` indica ausência de aresta
-- ✅ Os índices dos vértices começam em **0**
+- O grafo deve ser **direcionado e acíclico (DAG)**
+- Pesos podem ser **negativos**, mas o valor `0` indica ausência de aresta
+- Os índices dos vértices começam em **0**
 
-## 🧠 Abordagem Utilizada
+## Abordagem Utilizada
 
 1. **Ordenação Topológica**: Utiliza o algoritmo de Kahn para processar os vértices em ordem linear
 2. **Programação Dinâmica**: 
@@ -30,58 +30,43 @@ O objetivo é calcular o **caminho simples com peso máximo** entre a origem e o
    - Para cada vértice na ordem topológica, atualiza as distâncias dos vizinhos
    - Registra o predecessor para reconstruir o caminho final
 
-## ✨ Funcionalidades Avançadas
+## Arquitetura do Algoritmo
 
-- **🔍 Detecção de Ciclos**: Identifica ciclos no grafo e exibe o caminho completo que forma o ciclo
-- **⚠️ Detecção de Arestas Duplicadas**: Verifica valores duplicados na mesma linha da matriz
-- **📍 Localização Precisa de Erros**: Mostra linha e posição exatas no arquivo para correções
-- **💡 Sugestões de Correção**: Fornece instruções detalhadas para corrigir problemas detectados
-- **📝 Parsing Inteligente**: Ignora automaticamente linhas vazias e comentários (`#`)
-- **🎨 Formatação Adaptativa**: Caminhos longos são quebrados em linhas para melhor legibilidade
+1. **Parsing de Entrada**: Lê e valida a matriz de adjacência
+2. **Detecção de Ciclos**: Verifica se o grafo é acíclico usando DFS
+3. **Ordenação Topológica**: Usa algoritmo de Kahn
+4. **Programação Dinâmica**: Calcula distâncias máximas iterativamente
+5. **Reconstrução de Caminho**: Reconstrói o caminho ótimo usando predecessores
 
-## 📥 Instalação e Download
+## Complexidade
 
-### Opção 1: Git Clone (Recomendado)
+- **Tempo**: O(V + E) - Linear no número de vértices e arestas
+- **Espaço**: O(V) - Para armazenar as estruturas auxiliares
+
+## Funcionalidades Avançadas
+
+- **Detecção de Ciclos**: Identifica ciclos no grafo e exibe o caminho completo que forma o ciclo
+- **Detecção de Arestas Duplicadas**: Verifica valores duplicados na mesma linha da matriz
+- **Localização Precisa de Erros**: Mostra linha e posição exatas no arquivo para correções
+- **Sugestões de Correção**: Fornece instruções detalhadas para corrigir problemas detectados
+- **Parsing Inteligente**: Ignora automaticamente linhas vazias e comentários (`#`)
+- **Formatação Adaptativa**: Caminhos longos são quebrados em linhas para melhor legibilidade
+
+## Como Executar
+
+### Execução Local
 
 ```bash
 # Clone o repositório
 git clone https://github.com/Jairson-Steinert/N1_Algoritimos_Avancados.git
-
-# Entre na pasta do projeto
 cd N1_Algoritimos_Avancados
-```
 
-### Opção 2: Download ZIP
-
-1. Acesse o repositório no GitHub
-2. Clique em **"Code"** → **"Download ZIP"**
-3. Extraia o arquivo ZIP
-4. Abra o terminal na pasta extraída
-
-## Configuração do Ambiente
-
-### 1. Criar Ambiente Virtual (Recomendado)
-
-```bash
-# Criar ambiente virtual
+# Criar ambiente virtual (recomendado)
 python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# ou
+.\.venv\Scripts\activate   # Windows
 
-# Ativar ambiente virtual
-# Windows:
-.\.venv\Scripts\activate
-# Linux/Mac:
-source .venv/bin/activate
-```
-
-### 2. Verificar Instalação
-
-```bash
-python --version  # Deve retornar Python 3.x
-```
-
-## 🛠️ Como Executar
-
-```bash
 # Executar com arquivo específico
 python n1.py entrada.txt
 
@@ -89,9 +74,27 @@ python n1.py entrada.txt
 python n1.py
 ```
 
-> **Nota:** Se nenhum arquivo for especificado, o script usará `entrada.txt` por padrão.
+### Execução no Replit
 
-## 📁 Formato do Arquivo de Entrada
+**Automática:**
+- Clique no botão "Run" para executar automaticamente com `entrada.txt`
+
+**Manual via Shell:**
+- Abra o Shell no painel de ferramentas à esquerda
+- Execute os comandos:
+```bash
+python3 n1.py                # Arquivo padrão
+python3 n1.py teste.txt       # Arquivo específico
+python3 n1.py teste_negativo.txt
+```
+
+## Arquivos de Teste
+
+- `entrada.txt`: Exemplo básico com 5 vértices
+- `teste.txt`: Teste com 25 vértices 
+- `teste_negativo.txt`: Teste com 50 vértices incluindo pesos negativos e um ciclo comentado
+
+## Formato do Arquivo de Entrada
 
 O arquivo deve seguir esta estrutura:
 
@@ -116,9 +119,9 @@ O arquivo deve seguir esta estrutura:
 0 4
 ```
 
-## 📊 Exemplos de Saída
+## Exemplos de Saída
 
-### ✅ Execução Bem-sucedida
+### Execução Bem-sucedida
 
 ```
 Matriz adjacência:
@@ -138,7 +141,7 @@ Resultado:
   • Peso total: 23
 ```
 
-### ❌ Erro: Ciclo Detectado
+### Erro: Ciclo Detectado
 
 ```
 ERRO DE GRAFO: Ciclo detectado!
@@ -157,7 +160,7 @@ SUGESTÃO DE CORREÇÃO:
    Isso removerá a aresta 10 → 8 e tornará o grafo acíclico
 ```
 
-### ⚠️ Erro: Valores Duplicados
+### Erro: Valores Duplicados
 
 ```
 ERRO: Valor '5' duplicado!
@@ -166,7 +169,7 @@ Localização: Linha 4 do arquivo (linha 1 da matriz), colunas 2 e 4
 Correção: Substitua uma das posições por '0'
 ```
 
-## 🏗️ Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 N1_Algoritimos_Avancados/
@@ -178,12 +181,7 @@ N1_Algoritimos_Avancados/
 ├── Relatório_N1_Algoritmos_Avançados.pdf  # Relatório acadêmico do projeto
 ```
 
-## 📈 Complexidade
-
-- **Tempo**: O(V + E) - Linear no número de vértices e arestas
-- **Espaço**: O(V) - Para armazenar as estruturas auxiliares
-
-## 👨‍💻 Autor
+## Autor
 
 **Jairson Steinert**
 - GitHub: [@Jairson-Steinert](https://github.com/Jairson-Steinert)

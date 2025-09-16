@@ -148,7 +148,7 @@ def detect_cycle_dfs(n: int, adjacency: List[List[int]]) -> Optional[List[int]]:
     return None
 
 
-def topological_sort(n: int, adjacency: List[List[int]], filename: str = "", original_line_numbers: List[int] = None) -> List[int]:
+def topological_sort(n: int, adjacency: List[List[int]], filename: str = "", original_line_numbers: Optional[List[int]] = None) -> List[int]:
     """Gera uma ordenação topológica para um grafo direcionado acíclico.
 
     Utiliza algoritmo de Kahn.
@@ -225,7 +225,7 @@ def topological_sort(n: int, adjacency: List[List[int]], filename: str = "", ori
 
 
 def longest_path_dag(
-    n: int, adjacency: List[List[int]], origin: int, destination: int, filename: str = "", original_line_numbers: List[int] = None
+    n: int, adjacency: List[List[int]], origin: int, destination: int, filename: str = "", original_line_numbers: Optional[List[int]] = None
 ) -> Tuple[Optional[List[int]], Optional[int]]:
     """Calcula o caminho simples de peso máximo entre origem e destino em um DAG.
 
@@ -265,9 +265,12 @@ def longest_path_dag(
             w = adjacency[u][v]
             if w != 0:
                 # se o vértice destino ainda não tem distância, tratamos como -inf
-                if dist[v] is None or dist[u] + w > dist[v]:
-                    dist[v] = dist[u] + w
-                    pred[v] = u
+                current_dist_u = dist[u]
+                if current_dist_u is not None:
+                    current_dist_v = dist[v]
+                    if current_dist_v is None or current_dist_u + w > current_dist_v:
+                        dist[v] = current_dist_u + w
+                        pred[v] = u
 
     # Se destino inatingível
     if dist[destination] is None:
