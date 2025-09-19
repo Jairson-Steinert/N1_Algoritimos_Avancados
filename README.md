@@ -2,7 +2,7 @@
 
 Implementação em Python para resolver o problema do caminho mais longo em um Grafo Acíclico Direcionado (DAG), desenvolvido como parte da disciplina de Algoritmos Avançados.
 
-**Autores:** Gabriel Brünning; Jairson Steinert
+**Autores:** Gabriel Brüning; Jairson Steinert
 
 **Professora:** Ma. Beatriz Michelson Reichert  
 **Disciplina:** Algoritmos Avançados
