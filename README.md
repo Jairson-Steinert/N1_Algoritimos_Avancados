@@ -3,6 +3,7 @@
 Implementação em Python para resolver o problema do caminho mais longo em um Grafo Acíclico Direcionado (DAG), desenvolvido como parte da disciplina de Algoritmos Avançados.
 
 **Autores:** Gabriel Brünning; Jairson Steinert
+
 **Professora:** Ma. Beatriz Michelson Reichert  
 **Disciplina:** Algoritmos Avançados
 
@@ -180,8 +181,6 @@ N1_Algoritimos_Avancados/
 ├── teste_negativo.txt            # Teste com pesos negativos e grafo grande
 ├── Relatório_N1_Algoritmos_Avançados.pdf  # Relatório acadêmico do projeto
 ```
-
-## Autor
 
 **Jairson Steinert**
 - GitHub: [@Jairson-Steinert](https://github.com/Jairson-Steinert)
