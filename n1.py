@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Prof. Ma. Beatriz Michelson Reichert
-Acadêmico: Jairson Steinert
+Acadêmicos: Gabriel Brünning; Jairson Steinert
 
 Trabalho N1 - Algoritmos Avançados
 Problema do caminho mais longo em grafos acíclicos direcionados (DAG).
